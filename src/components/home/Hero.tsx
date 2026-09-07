@@ -1,13 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import backdrop from "@/assets/school-backdrop.asset.json";
-
 export function Hero() {
   return (
     <section className="relative isolate min-h-[92vh] overflow-hidden">
       <img
-        src={backdrop.url}
+        src="/school-backdrop.png"
         alt="The Cornerstone Schools campus at sunset"
         fetchPriority="high"
         className="absolute inset-0 -z-10 size-full object-cover object-center"

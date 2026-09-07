@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import logo from "@/assets/logo.asset.json";
 
 const quickLinks = [
   { to: "/", label: "Home" },
@@ -18,7 +17,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <span className="flex size-14 items-center justify-center bg-primary-foreground p-1">
               <img
-                src={logo.url}
+                src="/logo.jpg"
                 alt="Cornerstone Schools logo"
                 width={56}
                 height={56}

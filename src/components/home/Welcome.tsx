@@ -1,4 +1,3 @@
-import students from "@/assets/students.asset.json";
 import { Reveal } from "@/components/site/Reveal";
 
 export function Welcome() {
@@ -7,7 +6,7 @@ export function Welcome() {
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative order-2 lg:order-1">
           <img
-            src={students.url}
+            src="/students.png"
             alt="Cornerstone Schools students in uniform on the school grounds"
             loading="lazy"
             className="aspect-4/3 w-full object-cover"

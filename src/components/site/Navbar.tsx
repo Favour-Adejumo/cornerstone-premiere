@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import logo from "@/assets/logo.asset.json";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -46,7 +45,7 @@ export function Navbar() {
       >
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={logo.url}
+            src="/logo.jpg"
             alt="Cornerstone Schools logo"
             width={48}
             height={48}

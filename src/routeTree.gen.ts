@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CoCurricularRouteImport } from './routes/co-curricular'
+import { Route as CollegeRouteImport } from './routes/college'
+import { Route as TenderlyRouteImport } from './routes/tenderly'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoCurricularRoute = CoCurricularRouteImport.update({
+  id: '/co-curricular',
+  path: '/co-curricular',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CollegeRoute = CollegeRouteImport.update({
+  id: '/college',
+  path: '/college',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TenderlyRoute = TenderlyRouteImport.update({
+  id: '/tenderly',
+  path: '/tenderly',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/co-curricular': typeof CoCurricularRoute
+  '/college': typeof CollegeRoute
+  '/tenderly': typeof TenderlyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/co-curricular': typeof CoCurricularRoute
+  '/college': typeof CollegeRoute
+  '/tenderly': typeof TenderlyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/co-curricular': typeof CoCurricularRoute
+  '/college': typeof CollegeRoute
+  '/tenderly': typeof TenderlyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/about' | '/co-curricular' | '/college' | '/tenderly'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/about' | '/co-curricular' | '/college' | '/tenderly'
+  id: '__root__' | '/' | '/about' | '/co-curricular' | '/college' | '/tenderly'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CoCurricularRoute: typeof CoCurricularRoute
+  CollegeRoute: typeof CollegeRoute
+  TenderlyRoute: typeof TenderlyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/co-curricular': {
+      id: '/co-curricular'
+      path: '/co-curricular'
+      fullPath: '/co-curricular'
+      preLoaderRoute: typeof CoCurricularRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/college': {
+      id: '/college'
+      path: '/college'
+      fullPath: '/college'
+      preLoaderRoute: typeof CollegeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tenderly': {
+      id: '/tenderly'
+      path: '/tenderly'
+      fullPath: '/tenderly'
+      preLoaderRoute: typeof TenderlyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CoCurricularRoute: CoCurricularRoute,
+  CollegeRoute: CollegeRoute,
+  TenderlyRoute: TenderlyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

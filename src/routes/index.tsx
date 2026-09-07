@@ -1,24 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { ClosingCta } from "@/components/home/ClosingCta";
+import { Difference } from "@/components/home/Difference";
+import { Hero } from "@/components/home/Hero";
+import { Offer } from "@/components/home/Offer";
+import { Proprietress } from "@/components/home/Proprietress";
+import { Sections } from "@/components/home/Sections";
+import { Stats } from "@/components/home/Stats";
+import { Testimonials } from "@/components/home/Testimonials";
+import { Values } from "@/components/home/Values";
+import { Welcome } from "@/components/home/Welcome";
+
+const title = "Cornerstone Schools — Exalted of God | Apata, Ibadan";
+const description =
+  "Cornerstone Schools combines academic excellence with character development to raise confident, disciplined and future-ready students. Admissions ongoing for 2026/27.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <Hero />
+      <Welcome />
+      <Difference />
+      <Values />
+      <Sections />
+      <Stats />
+      <Testimonials />
+      <Proprietress />
+      <Offer />
+      <ClosingCta />
+    </main>
   );
 }

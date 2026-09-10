@@ -21,6 +21,11 @@ const items = [
     title: "Structured Academic Approach",
     description: "A well-organized curriculum designed to deliver clarity, progress, and results.",
   },
+  {
+    title: "Digital & Future-Ready Learning",
+    description:
+      "We equip students with the skills, creativity, and confidence to thrive in a rapidly changing world.",
+  },
 ];
 
 export function Difference() {
@@ -59,7 +64,6 @@ export function Difference() {
               />
             </Reveal>
           ))}
-          <li className="hidden bg-background lg:block" aria-hidden="true" />
         </ul>
       </div>
     </section>

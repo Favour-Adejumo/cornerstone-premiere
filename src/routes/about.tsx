@@ -53,9 +53,14 @@ function AboutPage() {
           </li>
           <li className="flex gap-3">
             <Phone className="mt-1 size-4 shrink-0 text-teal" aria-hidden="true" />
-            <a href="tel:+2349064367102" className="text-primary hover:underline">
-              +2349064367102
-            </a>
+            <div className="flex flex-col gap-2">
+              <a href="tel:09074440887" className="text-primary hover:underline">
+                09074440887
+              </a>
+              <a href="tel:07014747910" className="text-primary hover:underline">
+                07014747910
+              </a>
+            </div>
           </li>
           <li className="flex gap-3">
             <Mail className="mt-1 size-4 shrink-0 text-teal" aria-hidden="true" />

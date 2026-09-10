@@ -7,13 +7,12 @@ import { Offer } from "@/components/home/Offer";
 import { Proprietress } from "@/components/home/Proprietress";
 import { Sections } from "@/components/home/Sections";
 import { Stats } from "@/components/home/Stats";
-import { Testimonials } from "@/components/home/Testimonials";
 import { Values } from "@/components/home/Values";
 import { Welcome } from "@/components/home/Welcome";
 
 const title = "Cornerstone Schools — Exalted of God | Apata, Ibadan";
 const description =
-  "Cornerstone Schools combines academic excellence with character development to raise confident, disciplined and future-ready students. Admissions ongoing for 2026/27.";
+  "Cornerstone Schools combines academic excellence with character development to raise confident, disciplined and future-ready students.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +35,6 @@ function Home() {
       <Values />
       <Sections />
       <Stats />
-      <Testimonials />
       <Proprietress />
       <Offer />
       <ClosingCta />

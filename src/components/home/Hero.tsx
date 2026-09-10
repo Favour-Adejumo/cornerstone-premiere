@@ -53,10 +53,6 @@ export function Hero() {
               Visit the School
             </Link>
           </div>
-
-          <p className="mt-8 text-xs uppercase tracking-[0.18em] opacity-75">
-            Admissions ongoing for 2026/27 session
-          </p>
         </div>
       </div>
     </section>

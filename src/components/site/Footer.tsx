@@ -6,7 +6,7 @@ const quickLinks = [
   { to: "/", label: "Home" },
   { to: "/tenderly", label: "Tenderly" },
   { to: "/college", label: "College" },
-  { to: "/about", label: "About" },
+  { to: "/about", hash: "contact", label: "Contact" },
 ] as const;
 
 export function Footer() {
@@ -47,6 +47,7 @@ export function Footer() {
               <li key={link.to}>
                 <Link
                   to={link.to}
+                  hash={"hash" in link ? link.hash : undefined}
                   className="text-sm opacity-80 transition-opacity hover:opacity-100"
                 >
                   {link.label}
@@ -65,9 +66,14 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
-              <a href="tel:+2349064367102" className="opacity-85 hover:opacity-100">
-                +2349064367102
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="tel:09074440887" className="opacity-85 hover:opacity-100">
+                  09074440887
+                </a>
+                <a href="tel:07014747910" className="opacity-85 hover:opacity-100">
+                  07014747910
+                </a>
+              </div>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />

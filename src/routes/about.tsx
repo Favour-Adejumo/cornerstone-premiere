@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const title = "About & Admissions — Cornerstone Schools";
 const description =
-  "About Cornerstone Schools, Apata, Ibadan. Admissions ongoing for the 2026/27 session — reach us by phone or email to apply or arrange a school visit.";
+  "About Cornerstone Schools, Apata, Ibadan. Reach us by phone or email to apply or arrange a school visit.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -32,7 +32,7 @@ function AboutPage() {
       <section id="admissions" className="mt-16 scroll-mt-28 border-t border-border pt-10">
         <h2 className="font-display text-2xl font-semibold text-primary">Admissions</h2>
         <p className="mt-3 text-base text-muted-foreground">
-          Admissions ongoing for 2026/27 session. Please contact the school to begin an application.
+          Please contact the school to begin an application.
         </p>
       </section>
 

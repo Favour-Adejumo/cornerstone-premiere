@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 
 const sections = [
@@ -9,13 +8,13 @@ const sections = [
     name: "Tenderly",
     to: "/tenderly",
     description: "Strong foundation for young learners through creativity and care.",
-    placeholder: "Tenderly photograph",
+    image: "/tenderly.jpg.jpeg",
   },
   {
     name: "College",
     to: "/college",
     description: "Academic excellence and leadership development for future success.",
-    placeholder: "College photograph",
+    image: "college.jpg",
   },
 ] as const;
 

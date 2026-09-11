@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, Brain, BriefcaseBusiness, Compass, Laptop, Target } from "lucide-react";
 
-import { ImagePlaceholder } from "@/components/site/ImagePlaceholder";
 import { Reveal } from "@/components/site/Reveal";
 
 const title = "College — Cornerstone Schools";
@@ -79,14 +78,14 @@ function CollegePage() {
     {
       name: "Otitor Emmanuel",
       role: "Outgoing Head Boy — 2025/2026",
-      imageLabel: "Otitor Emmanuel photograph",
+      image: "/headboy.jpeg",
       quote:
         "Cornerstone Schools has helped change my mindset and given me the foundation I need to prepare for my future. Through the guidance of experienced teachers and professionals, I have gained knowledge beyond the classroom and had opportunities for practical, hands-on learning rather than relying on theory alone. These experiences have greatly strengthened my confidence, skills, and readiness for the next stage of my journey.",
     },
     {
       name: "Agbebi Deborah",
       role: "Outgoing Head Girl — 2025/2026",
-      imageLabel: "Agbebi Deborah photograph",
+      image: "/headgirl.jpeg",
       quote:
         "My time at Cornerstone Schools has helped me become a better student and a more confident individual. As I pursue my ambition of becoming a medical practitioner, the academic skills and confidence I have developed here will continue to guide me in the future. Serving as Head Girl has also taught me responsibility, leadership, and the importance of believing in myself.",
     },
@@ -96,7 +95,7 @@ function CollegePage() {
     <main>
       <section className="relative isolate min-h-[70vh] overflow-hidden lg:min-h-[75vh]">
         <img
-          src="/college.jpg"
+          src="/college-hero.jpeg"
           alt="Cornerstone Schools College students"
           fetchPriority="high"
           className="absolute inset-0 -z-10 size-full object-cover object-center"
@@ -198,9 +197,10 @@ function CollegePage() {
               delay={index * 90}
               className="grid overflow-hidden border border-border bg-card sm:grid-cols-[11rem_minmax(0,1fr)]"
             >
-              <ImagePlaceholder
-                label={testimonial.imageLabel}
-                className="aspect-square w-full border-0 border-b sm:aspect-auto sm:min-h-full sm:border-r sm:border-b-0"
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="aspect-square w-full object-cover border-0 border-b sm:aspect-auto sm:min-h-full sm:border-r sm:border-b-0"
               />
               <div className="min-w-0 p-7 sm:p-8">
                 <blockquote className="text-sm leading-relaxed text-foreground/85">

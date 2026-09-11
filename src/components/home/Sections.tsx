@@ -14,7 +14,7 @@ const sections = [
     name: "College",
     to: "/college",
     description: "Academic excellence and leadership development for future success.",
-    image: "college.jpg",
+    image: "/college.jpg",
   },
 ] as const;
 
@@ -25,6 +25,7 @@ export function Sections() {
         <h2 className="font-display text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
           Our Sections
         </h2>
+
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           From early learning to college, we provide a strong academic journey for every student.
         </p>
@@ -38,16 +39,22 @@ export function Sections() {
               className="group block h-full border border-border bg-card transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="overflow-hidden">
-                <ImagePlaceholder
-                  label={section.placeholder}
-                  className="aspect-16/10 w-full border-0 transition-transform duration-500 group-hover:scale-[1.03]"
+                <img
+                  src={section.image}
+                  alt={`${section.name} at Cornerstone Schools`}
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
+
               <div className="p-8 lg:p-10">
-                <h3 className="font-display text-2xl font-semibold text-primary">{section.name}</h3>
+                <h3 className="font-display text-2xl font-semibold text-primary">
+                  {section.name}
+                </h3>
+
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {section.description}
                 </p>
+
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                   Learn More
                   <ArrowRight

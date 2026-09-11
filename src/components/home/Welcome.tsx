@@ -6,7 +6,7 @@ export function Welcome() {
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative order-2 lg:order-1">
           <img
-            src="/students.png"
+            src="/school-backdrop.png"
             alt="Cornerstone Schools students in uniform on the school grounds"
             loading="lazy"
             className="aspect-4/3 w-full object-cover"
